@@ -52,10 +52,7 @@ const Home = () => {
     };
   }, [hasNextPage, fetchNextPage]);
 
-  // console.log("data", data);
-
   const photos = data?.pages.flatMap((page) => page.results);
-  // console.log(photos);
   return (
     <div className="flex flex-col">
       <div className="w-full text-[#000000] dark:text-[#FFFFFF] bg-[#FFFFFF] dark:bg-[#0A0A0A] fixed z-30 top-0 left-0 md:h-20 h-16 flex items-center">

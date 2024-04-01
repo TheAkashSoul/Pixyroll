@@ -1,11 +1,16 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme("dark");
+  }, []);
 
   const toggleTheme = () => {
     if (theme === "light") {
